@@ -77,7 +77,7 @@ func initResource() *sdkresource.Resource {
 			extraResources,
 		)
 	})
-	return resource
+	return resource;
 }
 
 func initTracerProvider() *sdktrace.TracerProvider {
