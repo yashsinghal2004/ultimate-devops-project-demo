@@ -93,7 +93,7 @@ func initTracerProvider() *sdktrace.TracerProvider {
 	)
 	otel.SetTracerProvider(tp)
 	otel.SetTextMapPropagator(propagation.NewCompositeTextMapPropagator(propagation.TraceContext{}, propagation.Baggage{}))
-	return tp
+	return tp;
 }
 
 func initMeterProvider() *sdkmetric.MeterProvider {
@@ -109,7 +109,7 @@ func initMeterProvider() *sdkmetric.MeterProvider {
 		sdkmetric.WithResource(initResource()),
 	)
 	otel.SetMeterProvider(mp)
-	return mp
+	return mp;
 }
 
 func main() {
